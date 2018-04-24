@@ -11,3 +11,5 @@ allow dump_pds pds_block_device:blk_file r_file_perms;
 allow dump_pds shell_exec:file r_file_perms;
 allow dump_pds toolbox_exec:file rx_file_perms;
 allow dump_pds system_file:file execute_no_trans;
+allow dump_pds block_device:blk_file read;
+

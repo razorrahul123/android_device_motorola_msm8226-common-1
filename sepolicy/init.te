@@ -14,3 +14,8 @@ allow init sysfs_battery_supply:lnk_file read;
 
 # Allow init to write in debugfs
 allow init debugfs:file write;
+allow init kernel:security setcheckreqprot;
+allow init rootfs:file execute_no_trans;
+allow init self:process { dyntransition setcurrent };
+allow init shell_exec:file execute_no_trans;
+allow init system_file:dir create;
